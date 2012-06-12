@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NanoGrid - The NS2 Web-Based Server Browser</title>
+	<meta name="description" content="NanoGrid Server Browser" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="theme/nano/jquery-ui-1.8.19.custom.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/knockout-2.0.0.js"></script>
+	<script type="text/javascript" src="js/nanogrid.js"></script>
+  
+	<script type="text/javascript">
+		
+	</script>
+  <!--[if lt IE 8]>
+  <![endif]-->
+</head>
+<body>
+<div id="bg-wrapper">
+
+	<div id="content-wrapper">
+
+		<h2>NanoGrid NS2 Web-Based Server Browser</h2>
+		
+		<div id="button-wrapper">
+			<a href="#" data-bind="click: refreshList" class="refresh-button">Refresh</a>
+		</div>
+		
+		<table>
+			<thead><tr>
+				<th><span class="theader">Address</span></th>
+				<th><a href="#" class="theader" data-bind="click: sortByNames">Name</a></th>
+				<th><a href="#" class="theader" data-bind="click: sortByMaps">Map</a></th>
+				<th><a href="#" class="theader" data-bind="click: sortByPlayers">Players</a></th>
+				<th class="theader">Info</th>
+                                <th class="theader"></th>
+			</tr></thead>
+			<tbody data-bind="foreach: servers">
+				<tr data-bind="animateChange: players, checkOnline: map">
+					<td data-bind="click: $parent.openDialog, text: ip">todo</td>
+                                        <td data-bind="click: $parent.openDialog"><img data-bind="attr: { src: 'img/flags/' + country + '.png' }" class="flag" /><span data-bind="text: name">todo</span></td>
+					<td data-bind="click: $parent.openDialog, text: map">todo</td>
+					<td data-bind="click: $parent.openDialog"><span data-bind="text: players"></span>/<span data-bind="text: maxPlayers"></span></td>
+					<td data-bind="click: $parent.openDialog" class="gt">Build <span data-bind="text: build"></span> <span data-bind="text: tickrate"></span></td>
+                                        <td><a data-bind="attr: { href: connectURL  }" class="join-button"></a></td>
+				</tr>    
+			</tbody>
+		</table>
+		
+		<div id="server-dialog" title="Server Details">
+                    
+                    <div>
+                        <div class="dialog-left" data-bind=" text: dialogServer().name">Server Name</div>
+                        <div class="dialog-right">
+                            <span data-bind="text: dialogServer().players"></span>/<span data-bind="text: dialogServer().maxPlayers"></span>
+                            <a href="#" id="dialog-refresh" data-bind="click: refreshDialog">Refresh</a>
+                        </div>
+                    </div>
+                	
+			<table class="dialog">
+			<thead><tr>
+				<th><a href="#" class="theader" data-bind="click: sortPlayersByName">Name</a></th>
+				<th><a href="#" class="theader" data-bind="click: sortPlayersByScore">Score</a></th>
+			</tr></thead>
+			<tbody data-bind="foreach: players">
+				<tr>
+					<td data-bind="text: name">todo</td>
+					<td data-bind="text: points">todo</td>
+				</tr>    
+			
+			</tbody>
+		</table>
+			
+		</div>
+
+	</div>
+    
+    
+	
+</div>
+    
+<div id="footer">
+    <div id="footer-contents">
+        <a class="ns2" href="http://www.naturalselection2.com"><img src="img/ns2.png" alt="Natural Selection 2" /></a>
+        <div id="credits">
+            <p><img src="img/hyp.gif" />&nbsp; v1.0 - by Andrew Jones</p>
+            <p>Uses "PHP Source Query" by <a href="http://xpaw.ru/">xPaw</a></p>
+            <p>Master server list hosted by <a href="http://mendasp.net/">Mendasp</a></p>
+            <p>Flag icons by <a href="http://famfamfam.com/">Mark James</a></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"> 
+ 
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-8735379-3']);
+	_gaq.push(['_trackPageview']);
+ 
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+ 
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body { font-family: sans-serif; background:#000000; color:#EFF6F8; font-size:0.8em; margin:0; padding:0;}
+
+table { border:1px solid #252525; width:100%; margin-bottom: 50px; }
+table.dialog { border-color:#383838; }
+td, th { border: 0px solid; border-spacing:2px; border-style:none; padding: 2px 5px; zoom: 1; filter: alpha(opacity=100); opacity: 1; }
+tr { background: #333; zoom: 1; filter: alpha(opacity=80); opacity: 0.8;}
+tr:hover { background:#6891C5 !important; }
+th { background: #444; color: #fff; padding: 0; }
+
+th a { display:block; width:auto; height:auto; background:#2F4E6D; color: #fff; margin:0; text-decoration:none; }
+th a:hover { background:#aed7ff !important; color:#2F4E6D !important; margin:0; }
+th a:active { background:#aed7ff !important; color:#2F4E6D !important; margin:0; }
+th a:visited { background:#2F4E6D; color: #fff; margin:0; }
+
+.theader { padding:5px; }
+
+#bg-wrapper { width:960px; margin-left:auto; margin-right:auto; background:url(../img/bg.jpg) no-repeat; background-position-x: -25px; margin-top:-12px; padding-top:56px; }
+#content-wrapper { width:820px; margin-left:auto; margin-right:auto; }
+
+h2 {display:block; width:760px; height:150px; margin-left:auto; margin-right:auto; background:url(../img/nanogrid.png) no-repeat; overflow:hidden; text-indent:-9999px; }
+
+.refresh-button{ float:right; margin-right:10px; margin-bottom:10px; }
+
+#button-wrapper { width:100%; }
+
+.gt { font-size:0.9em; }
+
+a:focus { border:1px dotted #6891C5; outline:none; } 
+button:focus { border:1px dotted #6891C5; outline:none; } 
+
+.dialog-left { float:left; height:30px; padding-top:8px; }
+.dialog-right { float:right; height:30px; }
+
+.flag { margin-right:5px; border:1px solid #000; }
+
+.join-button { font-size:0.9em !important; line-height:1.0 !important; height: 2.0em !important; }
+
+#footer { width:100%; background:#212629; min-height:200px; border-top: 1px solid #31464D; }
+#footer-contents { width: 780px; margin-left:auto; margin-right: auto; padding:20px;}
+
+.ns2 { display:block; width:400px; height:96px; margin-left:auto; margin-right: auto }
+
+#credits { color:#83A8B3; margin-left:10px;}
+#credits a { color:#fff; }
+#credits a:hover { color:#fff; }
+#credits a:visited { color:#519DFF; }
+#credits a:active { color:#fff; }
